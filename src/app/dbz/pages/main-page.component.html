@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dragon Ball Z</title>
+  </head>
+  <body>
+    <h1>DBZ Characters</h1>
+    <hr />
+
+    <div class="row">
+      <div class="col">
+        <dbz-list
+          [characterList]="characters"
+          (onDelete)="onDeleteCharacter($event)"
+        ></dbz-list>
+      </div>
+      <div class="col">
+        <dbz-add-character
+          (onNewCharacter)="onNewCharacter($event)"
+        ></dbz-add-character>
+      </div>
+    </div>
+  </body>
+</html>
